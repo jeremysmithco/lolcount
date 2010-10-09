@@ -1,0 +1,10 @@
+config/database.yml
+.DS_Store
+*.log
+*.pid
+tmp/**/*
+public/system/*
+*.tmproj
+coverage.data
+coverage/
+coverage/*
