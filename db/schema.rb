@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101009164159) do
+ActiveRecord::Schema.define(:version => 20101010023951) do
 
   create_table "tweets", :force => true do |t|
     t.string   "profile_image_url"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20101009164159) do
     t.string   "iso_language_code"
     t.string   "source"
     t.datetime "updated_at"
+    t.string   "to_user"
   end
 
 end

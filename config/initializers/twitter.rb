@@ -1,0 +1,2 @@
+ConsumerToken, ConsumerSecret = 'TkXndJf8O546JNM5nTfg', '5gxWF9KXTu61FY0wDeMvbD7MrDOY2YHMGXQSDsEfU'
+AccessToken, AccessSecret = '200598252-8NZmOycnLHvYf6NDjxOhkeFE8Nma3tSsSwOxx9XH', '5elBsK2bcGl6Cps82EEN2I0AlKbN28ZxtGm26aG0FEM'
