@@ -1,8 +1,8 @@
 namespace :scheduled do
-  desc "Get LOLs"
-  task :get_lols => :environment do
+  desc "Get Tweets"
+  task :get_tweets => :environment do
 
-    puts "Get LOLs: #{Time.now}"
+    puts "Get Tweets: #{Time.now}"
     
     tweet_attributes = Tweet.new.attributes().keys.push('id')
     latest_tweet = Tweet.find(:first, :select => :id, :order => 'id desc')
@@ -41,14 +41,10 @@ namespace :scheduled do
         
       end
       
-      
-#      oauth = Twitter::OAuth.new(ConsumerToken, ConsumerSecret)
-#      oauth.authorize_from_access(AccessToken, AccessSecret)
-      
     rescue => e
       puts "Error: #{e}"
       #rake_logger.info "Error: #{e}"
-      #system "echo \"Subject: Get LOLs\n\nError: #{e}\n\" | sendmail jeremy@bentoncreation.com"
+      #system "echo \"Subject: Get Tweets\n\nError: #{e}\n\" | sendmail jeremy@bentoncreation.com"
     end
   
   end
