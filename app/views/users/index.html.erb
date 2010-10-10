@@ -5,7 +5,7 @@
 	</tr>
 	<% @users.each do |user| %>
 		<tr>
-			<td><%= link_to user.screen_name, user_path(user.screen_name) %></td>
+			<td><img src="http://img.tweetimag.es/i/<%= user.screen_name %>_m" /> <%= link_to user.screen_name, user_path(user.screen_name) %></td>
 			<td><%= user.lol_count %></td>
 		</tr>
 	<% end -%>

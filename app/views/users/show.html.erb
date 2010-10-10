@@ -1,4 +1,5 @@
-<h1><%= @user.screen_name %></h1>
+<h1><img src="http://img.tweetimag.es/i/<%= @user.screen_name %>_b" /> <%= @user.screen_name %></h1>
+<p><a href="http://twitter.com/#!/<%= @user.screen_name %>">Twitter Profile</a></p>
 
 <table>
 	<tr>
@@ -8,7 +9,7 @@
 			<% @user.received_lols.each do |lol| %>
 				<p>
 					<%= lol.tweet.text %><br />
-					<small>(<%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %>)</small>
+					<small><img src="http://img.tweetimag.es/i/<%= lol.tweet.from_user %>_m" /> <%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %></small>
 				</p>
 			<% end %>
 		</td>
@@ -18,7 +19,7 @@
 			<% @user.given_lols.each do |lol| %>
 			<p>
 				<%= lol.tweet.text %><br />
-				<small>(<%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %>)</small>
+				<small><img src="http://img.tweetimag.es/i/<%= lol.tweet.from_user %>_m" /> <%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %></small>
 			</p>
 			<% end %>
 		</td>
