@@ -2,7 +2,7 @@ namespace :twitter do
   desc "Get Tweets"
   task :get_tweets => :environment do
 
-    puts "Get Tweets: #{Time.now}"
+    rake_logger.info "Get Tweets: #{Time.now}"
     
     tweet_attributes = Tweet.new.attributes().keys.push('id')
     latest_tweet = Tweet.find(:first, :select => :id, :order => 'id desc')
@@ -33,7 +33,7 @@ namespace :twitter do
         break if break_next_time
 
         if !search.next_page?
-          puts "no next page after: #{i}"
+          rake_logger.info "no next page after: #{i}"
           # go an extra page, to pick up any that could have been missed
           break_next_time = true
         end
@@ -41,7 +41,6 @@ namespace :twitter do
       end
       
     rescue => e
-      puts "Error: #{e}"
       rake_logger.info "Error: #{e}"
       system "echo \"Subject: Get Tweets\n\nError: #{e}\n\" | sendmail jeremy@bentoncreation.com"
     end
