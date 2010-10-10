@@ -1,4 +1,4 @@
-namespace :scheduled do
+namespace :twitter do
   desc "Get Tweets"
   task :get_tweets => :environment do
 
@@ -21,13 +21,12 @@ namespace :scheduled do
           # get rid of attr in hash not being stored
           tweet.delete_if {|key,value| !tweet_attributes.include?(key) }
           tweet_exists = Tweet.exists?(tweet.id)
-          puts "#{tweet.id}: #{tweet_exists}"
+          rake_logger.info "#{tweet.id}: #{tweet_exists}"
           if !tweet_exists
             Tweet.create(tweet) do |t|
               # force id, instead of autoincrementing
               t.id = tweet.id
             end
-            #loler = User.find_by_screen_name(tweet.from_user) || User.create_from_screen_name(tweet.from_user)
           end
         end
         
@@ -43,8 +42,8 @@ namespace :scheduled do
       
     rescue => e
       puts "Error: #{e}"
-      #rake_logger.info "Error: #{e}"
-      #system "echo \"Subject: Get Tweets\n\nError: #{e}\n\" | sendmail jeremy@bentoncreation.com"
+      rake_logger.info "Error: #{e}"
+      system "echo \"Subject: Get Tweets\n\nError: #{e}\n\" | sendmail jeremy@bentoncreation.com"
     end
   
   end
