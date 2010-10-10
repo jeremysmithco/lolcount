@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101010031443) do
+ActiveRecord::Schema.define(:version => 20101010070700) do
+
+  create_table "lols", :force => true do |t|
+    t.integer  "loler_id"
+    t.integer  "lolee_id"
+    t.integer  "tweet_id",   :limit => 8
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tweets", :force => true do |t|
     t.string   "profile_image_url"

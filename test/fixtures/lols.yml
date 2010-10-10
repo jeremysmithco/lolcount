@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  loler_id: 1
+  lolee_id: 1
+  tweet_id: 1
+
+two:
+  loler_id: 1
+  lolee_id: 1
+  tweet_id: 1
