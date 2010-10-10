@@ -10,13 +10,26 @@ namespace :scheduled do
     begin
       
       Twitter::Search.new('#lol').per_page(100).since_id(latest_tweet.id).each do |tweet|
+        
         # get rid of attr in hash not being stored
         tweet.delete_if {|key,value| !tweet_attributes.include?(key) }
+        
         Tweet.create(tweet) do |t|
-          # force id, instead of autoincremeting
+          # force id, instead of autoincrementing
           t.id = tweet.id
         end
+        
+#        loler = User.find_by_screen_name(tweet.from_user) || User.create_from_screen_name(tweet.from_user)
+        
+        
+        
       end
+
+      #      mentions.each do |m|
+      #        listener = user.listeners.find_by_screen_name(m['user']['screen_name']) || Listener.create_from_mention(self, m)      
+      #        listener.increment!(:count)
+      #      end
+      #      update_attributes(:last_processed_at => Time.now, :last_processed_id => mentions.first['id'])
 
 #      oauth = Twitter::OAuth.new(ConsumerToken, ConsumerSecret)
 #      oauth.authorize_from_access(AccessToken, AccessSecret)
