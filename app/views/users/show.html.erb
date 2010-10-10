@@ -1,0 +1,26 @@
+<h1><%= @user.screen_name %></h1>
+
+<table>
+	<tr>
+		<td valign="top">
+			<h3>Received LOLs: <%= @user.received_lols.count %></h3>
+			
+			<% @user.received_lols.each do |lol| %>
+				<p>
+					<%= lol.tweet.text %><br />
+					<small>(<%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %>)</small>
+				</p>
+			<% end %>
+		</td>
+		<td valign="top">
+			<h3>Given LOLs: <%= @user.given_lols.count %></h3>
+			
+			<% @user.given_lols.each do |lol| %>
+			<p>
+				<%= lol.tweet.text %><br />
+				<small>(<%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %>)</small>
+			</p>
+			<% end %>
+		</td>
+	</tr>
+</table>
