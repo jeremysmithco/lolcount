@@ -10,11 +10,16 @@
 <div id="clouds"></div>
 
 <div id="container">
+	
+	<div id="content">
 	<% flash.each do |key, value| -%>
 	  <div id="<%= key %>"><%=h value %></div>
 	<% end -%>
 
 	<%= yield %>
+	
+	<p style="font-size:12px;margin:50px 0 0 0;">This site made possible by <a href="http://rubyonrails.org/">Ruby on Rails</a>, John Nunemaker&rsquo;s <a href="http://twitter.rubyforge.org/">Twitter gem</a>, <a href="http://img.tweetimag.es/">tweetimage.es</a> and The League of Moveable Type&rsquo;s <a href="http://www.theleagueofmoveabletype.com/fonts/2-sniglet">Sniglet</a>. Design &amp; code by <a href="http://bentoncreation.com/">Bent on Creation</a>. Copyright &copy; 2010.</p>
+	</div>
 </div>
 </body>
 </html>
