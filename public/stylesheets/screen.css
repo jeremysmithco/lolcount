@@ -7,12 +7,16 @@
 }
 
 html{
+		background: #7cd3ff url('/images/back.gif') 0 0 repeat;
     margin:0;
     padding:0;
     border:0;
 }
 body {
-    background: #7cd3ff url('/images/back.gif') 0 0 repeat;
+		background-image: url('/images/rays.png');
+		background-position: 50% 0;
+		background-repeat:no-repeat;
+		background-attachment:fixed;
     font-family: SnigletRegular, Arial, sans-serif;
     font-size: 24px;
     line-height: 180%;
@@ -26,9 +30,9 @@ body {
 #clouds {
 		position:fixed;
 		background-image: url('/images/clouds.png');
-		background-position: center top;
+		background-position: right top;
 		background-repeat:x;
-		height:270px;
+		height:240px;
 		width:100%;
 		margin:0;
 		padding:0;
@@ -61,12 +65,15 @@ form {
 }
 
 p {
-    margin: 0 0 10px 0;
+		font-family:'Lucida Grande', Helvetica, Arial;
+		font-size:16px;
+		line-height:150%;
+    margin: 10px 0;
 }
 
 h1 {
     font-size: 80px;
-		line-height:180%;	
+		line-height:100%;	
     font-weight:normal;
 		color:#d9f2ff;
     margin: 10px 0;
@@ -85,9 +92,10 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 40px;
     font-weight:normal;
     margin: 10px 0;
+		text-shadow: 0 0 10px #4bb6fa;
 }
 
 th {
@@ -98,12 +106,14 @@ th {
 		text-shadow: 0 0 10px #4bb6fa;
 }
 
-
-#container {
-    width:500px;
-    text-align:left;
-    margin:0 auto 0 auto;
-		padding: 100px 0 0 0;
+td {
+		padding:5px;
+		vertical-align:top;
 }
 
-
+#container {
+    width:600px;
+    text-align:left;
+    margin:0 auto 0 auto;
+		padding: 150px 0 50px 0;
+}

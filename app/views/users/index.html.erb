@@ -1,17 +1,20 @@
 <h1>#<span class="white">LOL</span>count</h1>
 
+<p style="text-align:center;margin:20px 0 50px 0;">Who's the LOLziest one of all?</p>
 
 <h2>Top 100</h2>
 
 <table style="margin:0 auto;">
 	<tr>
+		<th></th>
 		<th style="font-size:36px;">User</th>
 		<th style="font-size:36px;">Count</th>
 	</tr>
-	<% @users.each do |user| %>
+	<% @users.each_with_index do |user, i| %>
 		<tr>
-			<td style=""><img src="http://img.tweetimag.es/i/<%= user.screen_name %>_m" /> <%= link_to user.screen_name, user_path(user.screen_name) %></td>
-			<td style="font-size:36px;"><%= user.lol_count %></td>
+			<td style="font-family:'Lucida Grande', Helvetica, Arial;font-size:16px;line-height:200%;text-align:right;color:#d9f2ff;"><%= i+1 %></td>
+			<td style="font-size:30px;line-height:120%;"><%= link_to '<img src="http://img.tweetimag.es/i/' << user.screen_name << '_m" style="border:3px solid #fff;vertical-align:middle;" />', user_path(user.screen_name) %> <%= link_to user.screen_name, user_path(user.screen_name) %></td>
+			<td style="font-family:'Lucida Grande', Helvetica, Arial;font-size:22px;line-height:100%;text-align:left;"><%= user.lol_count %></td>
 		</tr>
 	<% end -%>
 </table>

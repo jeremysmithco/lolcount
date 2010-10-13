@@ -1,25 +1,33 @@
-<h1><img src="http://img.tweetimag.es/i/<%= @user.screen_name %>_b" /> <%= @user.screen_name %></h1>
-<p><a href="http://twitter.com/#!/<%= @user.screen_name %>">Twitter Profile</a></p>
+<h1><%= @user.screen_name %></h1>
+
+<p style="text-align:center;margin:20px 0 30px 0;">
+	<img src="http://img.tweetimag.es/i/<%= @user.screen_name %>_b"  style="border:6px solid #fff;" /><br />
+	<a href="http://twitter.com/#!/<%= @user.screen_name %>">Twitter Profile</a>
+</p>
 
 <table>
 	<tr>
-		<td valign="top">
-			<h3>Received LOLs: <%= @user.received_lols.count %></h3>
-			
+		<th style="width:50%;vertical-align:top;padding-right:10px;">
+			Received: <span style="font-family:'Lucida Grande', Helvetica, Arial;font-size:30px;line-height:100%;"><%= @user.received_lols.count %></span>
+		</th>
+		<th style="width:50%;vertical-align:top;padding-left:10px;">
+			Given: <span style="font-family:'Lucida Grande', Helvetica, Arial;font-size:30px;line-height:100%;"><%= @user.given_lols.count %></span>
+		</th>
+	</tr>
+	<tr>
+		<td style="width:50%;vertical-align:top;padding-right:10px;">
 			<% @user.received_lols.each do |lol| %>
-				<p>
+				<p style="margin-bottom:30px;">
 					<%= lol.tweet.text %><br />
-					<small><img src="http://img.tweetimag.es/i/<%= lol.tweet.from_user %>_m" /> <%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %></small>
+					<small><img src="http://img.tweetimag.es/i/<%= lol.tweet.from_user %>_m" style="border:3px solid #fff;vertical-align:middle;" /> <%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %></small>
 				</p>
 			<% end %>
 		</td>
-		<td valign="top">
-			<h3>Given LOLs: <%= @user.given_lols.count %></h3>
-			
+		<td style="width:50%;vertical-align:top;padding-left:10px;">
 			<% @user.given_lols.each do |lol| %>
 			<p>
 				<%= lol.tweet.text %><br />
-				<small><img src="http://img.tweetimag.es/i/<%= lol.tweet.from_user %>_m" /> <%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %></small>
+				<small><img src="http://img.tweetimag.es/i/<%= lol.tweet.from_user %>_m" style="border:3px solid #fff;vertical-align:middle;" /> <%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %></small>
 			</p>
 			<% end %>
 		</td>
