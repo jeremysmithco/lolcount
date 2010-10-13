@@ -1,0 +1,109 @@
+@font-face {
+	font-family: 'SnigletRegular';
+	src: url('/fonts/Sniglet-webfont.eot');
+	src: local('☺'), url('/fonts/Sniglet-webfont.woff') format('woff'), url('/fonts/Sniglet-webfont.ttf') format('truetype'), url('/fonts/Sniglet-webfont.svg#webfontz0wH6DCU') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body {
+    background: #7cd3ff url('/images/back.gif') 0 0 repeat;
+    font-family: SnigletRegular, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 180%;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+
+#clouds {
+		position:fixed;
+		background-image: url('/images/clouds.png');
+		background-position: center top;
+		background-repeat:x;
+		height:270px;
+		width:100%;
+		margin:0;
+		padding:0;
+}
+
+a:link {
+    color:#2e9cd5;
+}
+
+a:visited {
+    color:#2e9cd5;
+}
+a:hover {
+    color:#2e9cd5;
+}
+a:active {
+    color:#2e9cd5;
+}
+
+img	{
+    border: 0;
+}
+
+a img {
+    text-decoration: none;
+}
+
+form {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px 0;
+}
+
+h1 {
+    font-size: 80px;
+		line-height:180%;	
+    font-weight:normal;
+		color:#d9f2ff;
+    margin: 10px 0;
+		text-align:center;
+		text-shadow: 0 0 10px #4bb6fa;
+}
+
+h1 .white {color:#fff;}
+
+h2 {
+    font-size: 60px;
+    font-weight:normal;
+    margin: 10px 0;
+		text-align:center;
+		text-shadow: 0 0 10px #4bb6fa;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight:normal;
+    margin: 10px 0;
+}
+
+th {
+    font-size: 36px;
+    font-weight:normal;
+    margin: 10px 0;
+		text-align:left;
+		text-shadow: 0 0 10px #4bb6fa;
+}
+
+
+#container {
+    width:500px;
+    text-align:left;
+    margin:0 auto 0 auto;
+		padding: 100px 0 0 0;
+}
+
+

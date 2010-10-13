@@ -1,12 +1,17 @@
-<table>
+<h1>#<span class="white">LOL</span>count</h1>
+
+
+<h2>Top 100</h2>
+
+<table style="margin:0 auto;">
 	<tr>
-		<th>User</th>
-		<th>LOLcount</th>
+		<th style="font-size:36px;">User</th>
+		<th style="font-size:36px;">Count</th>
 	</tr>
 	<% @users.each do |user| %>
 		<tr>
-			<td><img src="http://img.tweetimag.es/i/<%= user.screen_name %>_m" /> <%= link_to user.screen_name, user_path(user.screen_name) %></td>
-			<td><%= user.lol_count %></td>
+			<td style=""><img src="http://img.tweetimag.es/i/<%= user.screen_name %>_m" /> <%= link_to user.screen_name, user_path(user.screen_name) %></td>
+			<td style="font-size:36px;"><%= user.lol_count %></td>
 		</tr>
 	<% end -%>
 </table>
