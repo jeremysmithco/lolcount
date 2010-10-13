@@ -1,6 +1,9 @@
 <h1>#<span class="white">LOL</span>count</h1>
 
-<p style="text-align:center;margin:20px 0 50px 0;">Who's the LOLziest one of all?</p>
+<p style="font-size:24px;text-align:center;margin:20px 0;">&ldquo;Who&rsquo;s the LOLziest one of all?&rdquo;</p>
+
+<p style="margin:0 0 10px 0;">This is a little experiment to see who is the funniest user on Twitter, based on mentions and retweets of that person with the hash <big>#LOL</big> in the tweet.</p>
+<p style="font-size:12px;margin:0 0 50px 0;text-align:center;">Counts are updated every 5 minutes. Logging data since October 12, 2010.</p>
 
 <h2>Top 100</h2>
 
@@ -13,8 +16,10 @@
 	<% @users.each_with_index do |user, i| %>
 		<tr>
 			<td style="font-family:'Lucida Grande', Helvetica, Arial;font-size:16px;line-height:200%;text-align:right;color:#d9f2ff;"><%= i+1 %></td>
-			<td style="font-size:30px;line-height:120%;"><%= link_to '<img src="http://img.tweetimag.es/i/' << user.screen_name << '_m" style="border:3px solid #fff;vertical-align:middle;" />', user_path(user.screen_name) %> <%= link_to user.screen_name, user_path(user.screen_name) %></td>
+			<td style="font-size:30px;line-height:120%;"><%= link_to '<img src="http://img.tweetimag.es/i/' << user.screen_name << '_m" style="width:24px;height:24px;border:3px solid #fff;vertical-align:middle;" />', user_path(user.screen_name) %> <%= link_to user.screen_name, user_path(user.screen_name) %></td>
 			<td style="font-family:'Lucida Grande', Helvetica, Arial;font-size:22px;line-height:100%;text-align:left;"><%= user.lol_count %></td>
 		</tr>
 	<% end -%>
 </table>
+
+<p style="font-size:12px;margin:50px 0 0 0;">This site made possible by <a href="http://rubyonrails.org/">Ruby on Rails</a>, John Nunemaker&rsquo;s <a href="http://twitter.rubyforge.org/">Twitter gem</a>, <a href="http://img.tweetimag.es/">tweetimage.es</a> and The League of Moveable Type&rsquo;s <a href="http://www.theleagueofmoveabletype.com/fonts/2-sniglet">Sniglet</a>.</p>
