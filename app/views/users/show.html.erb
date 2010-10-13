@@ -8,15 +8,15 @@
 <table>
 	<tr>
 		<th style="width:50%;vertical-align:top;padding-right:10px;">
-			Received: <span style="font-family:'Lucida Grande', Helvetica, Arial;font-size:30px;line-height:100%;"><%= @user.received_lols.count %></span>
+			Received: <span style="font-family:'Lucida Grande', Helvetica, Arial;font-size:30px;line-height:100%;"><%= @received_lols_count %></span>
 		</th>
 		<th style="width:50%;vertical-align:top;padding-left:10px;">
-			Given: <span style="font-family:'Lucida Grande', Helvetica, Arial;font-size:30px;line-height:100%;"><%= @user.given_lols.count %></span>
+			Given: <span style="font-family:'Lucida Grande', Helvetica, Arial;font-size:30px;line-height:100%;"><%= @given_lols_count %></span>
 		</th>
 	</tr>
 	<tr>
 		<td style="width:50%;vertical-align:top;padding-right:10px;">
-			<% @user.received_lols.each do |lol| %>
+			<% @received_lols.each do |lol| %>
 				<p style="margin-bottom:30px;">
 					<%= lol.tweet.text %><br />
 					<small><img src="http://img.tweetimag.es/i/<%= lol.tweet.from_user %>_m" style="border:3px solid #fff;vertical-align:middle;" /> <%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %></small>
@@ -24,7 +24,7 @@
 			<% end %>
 		</td>
 		<td style="width:50%;vertical-align:top;padding-left:10px;">
-			<% @user.given_lols.each do |lol| %>
+			<% @given_lols.each do |lol| %>
 			<p>
 				<%= lol.tweet.text %><br />
 				<small><img src="http://img.tweetimag.es/i/<%= lol.tweet.from_user %>_m" style="border:3px solid #fff;vertical-align:middle;" /> <%= link_to lol.tweet.from_user, user_path(lol.tweet.from_user) %></small>
