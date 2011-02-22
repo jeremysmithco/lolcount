@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101010070700) do
+ActiveRecord::Schema.define(:version => 20110222043321) do
 
   create_table "lols", :force => true do |t|
     t.integer  "loler_id"
@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(:version => 20101010070700) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "lols", ["lolee_id"], :name => "index_lols_on_lolee_id"
+  add_index "lols", ["loler_id"], :name => "index_lols_on_loler_id"
+  add_index "lols", ["tweet_id"], :name => "index_lols_on_tweet_id"
 
   create_table "tweets", :force => true do |t|
     t.string   "profile_image_url"
