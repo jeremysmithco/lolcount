@@ -17,7 +17,7 @@
 		<tr>
 			<td style="font-family:'Lucida Grande', Helvetica, Arial;font-size:16px;line-height:200%;text-align:right;color:#d9f2ff;"><%= i+1 %></td>
 			<td style="font-size:30px;line-height:120%;"><%= link_to '<img src="http://img.tweetimag.es/i/' << user.screen_name << '_m" style="width:24px;height:24px;border:3px solid #fff;vertical-align:middle;" />', user_path(user.screen_name) %> <%= link_to user.screen_name, user_path(user.screen_name) %></td>
-			<td style="font-family:'Lucida Grande', Helvetica, Arial;font-size:22px;line-height:100%;text-align:left;"><%= user.lol_count %></td>
+			<td style="font-family:'Lucida Grande', Helvetica, Arial;font-size:22px;line-height:100%;text-align:left;"><%= user.received_lol_count %></td>
 		</tr>
 	<% end -%>
 </table>
