@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110222043321) do
+ActiveRecord::Schema.define(:version => 20110222051459) do
 
   create_table "lols", :force => true do |t|
     t.integer  "loler_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20110222043321) do
     t.string   "screen_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "received_lol_count", :default => 0
   end
 
 end
